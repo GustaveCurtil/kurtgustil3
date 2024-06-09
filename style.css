@@ -1,0 +1,21 @@
+*, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100svh;
+    background-color: rgb(207, 207, 207);
+
+}
+
+section, body>div, header {
+    border: 1px solid black;
+}
+
+#pagina1, #pagina2, #pagina3 {
+    justify-content: space-around;
+    align-items: center;
+}

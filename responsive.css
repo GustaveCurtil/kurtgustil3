@@ -1,0 +1,106 @@
+#themas {grid-area: themas; overflow-y: auto;}
+#titel {grid-area: titel; overflow-y: auto;}
+#talen {grid-area: talen; overflow-y: auto;}
+#profielfoto {grid-area: profielfoto; overflow-y: auto;}
+#palestina {grid-area: palestina; overflow-y: auto;}
+#diensten {grid-area: diensten; overflow-y: auto;}
+#contactgegevens {grid-area: contactgegevens; overflow-y: auto;}
+#voorstelling {grid-area: voorstelling; overflow-y: auto;}
+#memorygame {grid-area: memorygame; overflow-y: auto;}
+#sinusanimatie {grid-area: sinusanimatie; overflow-y: auto;}
+#portfolio {grid-area: portfolio; overflow-y: auto;}
+#websites {grid-area: websites; overflow-y: auto;}
+#werkwijze {grid-area: werkwijze; overflow-y: auto;}
+
+/*/ / MOBILE / /*/
+@media screen and (max-width: 400px) {
+
+    /* pagina 1*/
+    #pagina1 {display: flex; grid-area: pagina1;}
+    #pagina2 {display: none; grid-area: pagina2;}
+    #pagina3 {display: none; grid-area: pagina3;}
+
+    body {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: 12vw 3fr 2fr 3fr 12vw;
+        grid-template-areas: 
+        "titel titel"
+        "voorstelling voorstelling"
+        "profielfoto contactgegevens"
+        "diensten diensten"
+        "pagina1 pagina1";
+    }
+
+    #themas {display: none;}
+    #talen {display: none;}
+    #palestina {display: none;}
+    #memorygame {display: none;}
+    #sinusanimatie {display: none;}
+    #portfolio {display: none;}
+    #websites {display: none;}
+    #werkwijze {display: none;}
+
+    /* pagina 2*/
+    .portfoliopagina {
+        grid-template-columns: 1fr;
+        grid-template-rows: 12vw 2fr 60vw 2fr 12vw;
+        grid-template-areas: 
+        "titel"
+        "werkwijze"
+        "websites"
+        "portfolio"
+        "pagina2";
+    }
+
+    .portfoliopagina #voorstelling {display: none;}
+    .portfoliopagina #profielfoto {display: none;}
+    .portfoliopagina #contactgegevens {display: none;}
+    .portfoliopagina #diensten {display: none;}
+    .portfoliopagina #portfolio {display: flex;}
+    .portfoliopagina #websites {display: flex;}
+    .portfoliopagina #werkwijze {display: flex;}
+
+    /* pagina 3*/
+    .memorypagina {
+        grid-template-columns: 1fr;
+        grid-template-rows: 12vw 1fr 12vw;
+        grid-template-areas: 
+        "titel"
+        "memorygame"
+        "pagina3";
+    }
+
+    .memorypagina #voorstelling {display: none;}
+    .memorypagina #profielfoto {display: none;}
+    .memorypagina #contactgegevens {display: none;}
+    .memorypagina #diensten {display: none;}
+    .memorypagina #portfolio {display: none;}
+    .memorypagina #websites {display: none;}
+    .memorypagina #werkwijze {display: none;}
+    .memorypagina #memorygame {display: flex;}
+}
+
+/*/ / DESKTOP / /*/
+@media screen and (min-width: 401px) {
+    body {
+        display: grid;
+        grid-template-columns: calc(4 * var(--hoogte-header)) calc(7 * var(--hoogte-header)) 18fr 38fr;
+        grid-template-rows: var(--hoogte-header) 20fr 25fr 18fr calc(4 * var(--hoogte-header));
+        grid-template-areas: 
+        "themas titel titel titel"
+        "profielfoto diensten contactgegevens memorygame"
+        "profielfoto palestina voorstelling memorygame"
+        "sinusanimatie sinusanimatie voorstelling memorygame"
+        "portfolio websites werkwijze werkwijze";
+    }
+
+    #themas {display: flex;}
+    #pagina1, #pagina2, #pagina3 {display: none;}
+    #talen {display: none;}
+    
+}
+
+
+
+

@@ -1,0 +1,16 @@
+
+.thema {
+    border: 1px solid rgb(0, 0, 0);
+    height: 100%;
+    width: 25%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#titel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

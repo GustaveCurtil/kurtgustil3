@@ -1,0 +1,26 @@
+[
+    {
+    "url": "www.wijslijf.com",
+    "foto": "websites/wijslijf.webp",
+    "beschrijving": "Yu de manne", 
+    "scrolbaar": true
+    },
+    {
+    "url": "www.quedesfritjes.be",
+    "foto": "websites/quedesfritjes.webp",
+    "beschrijving": "Helaba lekkere frietjes", 
+    "scrolbaar": true
+    }, 
+    {
+    "url": "www.intentionz.be",
+    "foto": "websites/intentionz.webp",
+    "beschrijving": "jamajmajamaja", 
+    "scrolbaar": false
+    }, 
+    {
+        "url": "www.codequest.be",
+        "foto": "websites/codequest.webp",
+        "beschrijving": "jamajmajamaja", 
+        "scrolbaar": false
+        }
+]

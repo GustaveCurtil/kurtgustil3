@@ -1,0 +1,55 @@
+
+/*/ / PROFIELFOTO / /*/
+#profielfoto {
+    background-image: url(gust.png);
+    background-size: 45%;
+    background-position: 50%;
+    background-blend-mode:luminosity;
+    background-color: rgb(6, 57, 30);
+}
+
+
+/*/ / DIENSTEN / /*/
+#diensten {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#diensten .tab {
+    height: calc(100% / 3);
+    width: 25%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(145, 145, 145);
+}
+
+#diensten .huidig {
+    border-right: none;
+    background-color:transparent;
+}
+
+#diensten .dienst {
+    display: none;
+}
+
+#diensten .zichtbaar {
+    display: block;
+    height: 100%;
+    width: 75%;
+    overflow-y: auto;
+}
+
+/*/ / CONTACTGEGEVENS / /*/
+#contactgegevens {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*/ / VOORSTELLING / /*/
