@@ -22,10 +22,10 @@ fetch('websites.json')
 
             /* WEBBROWSER */
             let browserWindow = document.querySelector('.window');
+            let image = document.querySelector('.window img');
+            let uitleg = document.querySelector('#werkwijze')
             tab.addEventListener('click', (e)=> {
-                let image = document.querySelector('.window img');
                 tab.style.backgroundColor = 'white';
-                image.src = website.foto;
                 if (!website.scrolbaar) {
                     browserWindow.style.overflowY = 'hidden';
                     image.style.height = "100%";
@@ -33,7 +33,18 @@ fetch('websites.json')
                     browserWindow.style.overflowY = 'auto';
                     image.style.height = "auto";
                 }
+
+                if (window.matchMedia("(max-width: 400px)").matches) {
+                    uitleg.innerHTML = website.url;
+                } else {
+                    uitleg.innerHTML = website.beschrijving;
+                }
+                
+                image.src = website.foto;
             })
+
+            /* UITLEG */
+            
         }
     })
     .catch(error => console.error('Error loading translations:', error));

@@ -44,11 +44,11 @@
     /* pagina 2*/
     .portfoliopagina {
         grid-template-columns: 1fr;
-        grid-template-rows: 12vw 2fr 60vw 2fr 12vw;
+        grid-template-rows: 12vw 60vw 1fr 3fr 12vw;
         grid-template-areas: 
         "titel"
-        "werkwijze"
         "websites"
+        "werkwijze"
         "portfolio"
         "pagina2";
     }
