@@ -16,7 +16,7 @@
     flex-wrap: wrap;
 }
 
-#diensten .tab {
+.tab {
     height: calc(100% / 3);
     width: 25%;
 
@@ -24,20 +24,22 @@
     justify-content: center;
     align-items: center;
 
-    border: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-right: 1px solid rgb(0, 0, 0); ;
     background-color: rgb(145, 145, 145);
 }
+
+.tab:nth-child(3) {
+    border-bottom: 0;
+}
+
 
 #diensten .huidig {
     border-right: none;
     background-color:transparent;
 }
 
-#diensten .dienst {
-    display: none;
-}
-
-#diensten .zichtbaar {
+#dienst {
     display: block;
     height: 100%;
     width: 75%;

@@ -1,0 +1,16 @@
+{
+    "diensten": [
+        {
+            "titel": "⚡ Statische websites (vaste inhoud)",
+            "beschrijving": "<ul>\n<li>Een online visitekaartje.</li>\n<li>Goed voor websites die weinig tot geen inhoudelijke updates nodig hebben.</li>\n<li>Voorbeeld: deze portfolio website.</li>\n</ul>"
+        },
+        {
+            "titel": "🤸🏽‍♂️ Dynamische websites (zelf aanpasbaar)",
+            "beschrijving": "<ul>\n<li>Om zelf de content te beheren.</li>\n<li>Projecten / werken / nieuwigheden delen.</li>\n<li>Met behulp van een bestaande of op maat gemaakte Content Manager System (CMS).</li>\n<li>Voorbeeld: Voorbeelden: architectuurwebsite, online kunstgalerij, website voor een praktijk met workshops, etc.</li>\n</ul>"
+        },
+        {
+            "titel": "🌈 Web-platformen",
+            "beschrijving": "<ul><li>Login-systeem / content toevoegen, aanpassen en verwijderen / interactiviteit tussen gebruikers / web-scraping / etc.</li><li>Voorbeelden: cinema-platform, platform voor jouw boekenclub, eigen sociale media onder jouw vriendengroep, etc.</li></ul>"
+        }
+    ]
+}

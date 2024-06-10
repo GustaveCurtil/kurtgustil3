@@ -123,3 +123,12 @@ img {
 .window::-webkit-scrollbar-thumb{
 	background-color: rgb(176, 176, 176);
 }
+
+/* BESCHRIJVING */
+@media screen and (max-width: 400px) {
+    #werkwijze {
+        justify-content: center;
+        align-items: center;
+        font-size: xx-large;
+    }
+}
