@@ -46,6 +46,11 @@
     overflow-y: auto;
 }
 
+ul {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
 /*/ / CONTACTGEGEVENS / /*/
 #contactgegevens {
     display: flex;

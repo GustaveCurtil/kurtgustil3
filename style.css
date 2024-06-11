@@ -4,7 +4,10 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
+    font-family: "Chivo Mono", monospace;
     width: 100vw;
     height: 100svh;
     background-color: rgb(207, 207, 207);
