@@ -37,6 +37,12 @@
 } */
 
 
+#titel img {
+    height: 69%;
+    width: auto;
+}
+
+
 #titel {
     display: flex;
     justify-content: center;
