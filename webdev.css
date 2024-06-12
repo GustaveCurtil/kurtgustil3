@@ -1,11 +1,18 @@
 
 /*/ / PROFIELFOTO / /*/
 #profielfoto {
-    background-image: url(gust.png);
+    background-image: url(media/gust.png);
     background-size: 45%;
     background-position: 50%;
     background-blend-mode:luminosity;
     background-color: rgb(6, 57, 30);
+    position: relative;
+}
+
+#profielfoto img {
+    width: 69%;
+    position: absolute;
+    bottom: 0%;
 }
 
 

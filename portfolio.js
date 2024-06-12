@@ -22,7 +22,6 @@ fetch('websites.json')
 
             tab.appendChild(title);
             portfolio.appendChild(tab);
-
             /* WEBBROWSER */
             tab.addEventListener('click', (e)=> {
                 tab.style.backgroundColor = 'white';

@@ -10,13 +10,13 @@ body {
     font-family: "Chivo Mono", monospace;
     width: 100vw;
     height: 100svh;
-    background-color: rgb(207, 207, 207);
+    background-color: rgb(255, 255, 255);
 
 }
 
-section, body>div, header {
+/* section, body>div, header {
     border: 1px solid black;
-}
+} */
 
 #pagina1, #pagina2, #pagina3 {
     justify-content: space-around;
@@ -39,4 +39,14 @@ section, body>div, header {
     position: absolute;
     height: 100%;
     z-index: 10px;
+}
+
+#palestina h2 {
+    font-family: 'Times New Roman', Times, serif;
+    position: absolute;
+    color: rgb(255, 0, 0);
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -50%)
+    
 }
