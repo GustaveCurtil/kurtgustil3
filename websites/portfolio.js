@@ -3,7 +3,7 @@ let browserWindow = document.querySelector('.window');
 let image = document.querySelector('.window img');
 let uitleg = document.querySelector('#werkwijze')
 
-fetch('websites.json')
+fetch('websites/websites.json')
     .then(response => response.json())
     .then(websites => {
         for (let i = 0; i < websites.length; i++) {

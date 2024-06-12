@@ -1,31 +1,31 @@
 [
     {
     "url": "www.wijslijf.com",
-    "foto": "websites/wijslijf.webp",
+    "foto": "websites/fotos/wijslijf.webp",
     "beschrijving": "Yu de manne", 
     "scrolbaar": true
     },
     {
     "url": "www.quedesfritjes.be",
-    "foto": "websites/quedesfritjes.webp",
+    "foto": "websites/fotos/quedesfritjes.webp",
     "beschrijving": "Helaba lekkere frietjes", 
     "scrolbaar": true
     }, 
     {
     "url": "www.intentionz.be",
-    "foto": "websites/intentionz.webp",
+    "foto": "websites/fotos/intentionz.webp",
     "beschrijving": "jamajmajamaja", 
     "scrolbaar": false
     }, 
     {
     "url": "www.codequest.be",
-    "foto": "websites/codequest.webp",
+    "foto": "websites/fotos/codequest.webp",
     "beschrijving": "jamajmajamaja", 
     "scrolbaar": false
     }, 
     {
         "url": "www.louisarne.be",
-        "foto": "websites/codequest.webp",
+        "foto": "websites/fotos/codequest.webp",
         "beschrijving": "louisarne", 
         "scrolbaar": false
         }

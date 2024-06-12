@@ -43,10 +43,12 @@ body {
 
 #palestina h2 {
     font-family: 'Times New Roman', Times, serif;
+    width: max-content;
     position: absolute;
     color: rgb(255, 0, 0);
     top: 50%;
     left: 50%;
-    transform: translate(-30%, -50%)
+    transform: translate(-25%, -50%);
+    line-height: normal;
     
 }
