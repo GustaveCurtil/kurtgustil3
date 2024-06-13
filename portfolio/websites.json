@@ -3,30 +3,35 @@
     "url": "www.wijslijf.com",
     "foto": "websites/fotos/wijslijf.webp",
     "beschrijving": "Yu de manne", 
-    "scrolbaar": true
-    },
+    "scrolbaar": true, 
+    "kleur": "10,10,10"
+},
     {
     "url": "www.quedesfritjes.be",
     "foto": "websites/fotos/quedesfritjes.webp",
     "beschrijving": "Helaba lekkere frietjes", 
-    "scrolbaar": true
-    }, 
+    "scrolbaar": true, 
+    "kleur": "10,10,10"
+}, 
     {
     "url": "www.intentionz.be",
     "foto": "websites/fotos/intentionz.webp",
     "beschrijving": "jamajmajamaja", 
-    "scrolbaar": false
-    }, 
+    "scrolbaar": false, 
+    "kleur": "10,10,10"
+}, 
     {
     "url": "www.codequest.be",
     "foto": "websites/fotos/codequest.webp",
     "beschrijving": "jamajmajamaja", 
-    "scrolbaar": false
-    }, 
+    "scrolbaar": false, 
+    "kleur": "10,10,10"
+}, 
     {
         "url": "www.louisarne.be",
         "foto": "websites/fotos/codequest.webp",
         "beschrijving": "louisarne", 
-        "scrolbaar": false
-        }
+        "scrolbaar": false, 
+        "kleur": "10,10,10"    
+    }
 ]
