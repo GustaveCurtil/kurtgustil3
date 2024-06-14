@@ -368,7 +368,7 @@ let memorygame = document.querySelector(".static")
 const shoppingCart = [];
 
 //bij laden document
-document.addEventListener("DOMContentLoaded", sortBy("artist"))
+sortBy("artist")
 
 //Voor openen website + HAZARD knop
 function shuffleArray(array) {
@@ -512,50 +512,65 @@ function renderAlbums() {
     
         // Append the "favo-albums" container to the document or a specific parent element
         memorygame.appendChild(albumWrapper);
-        
-        //crazy hover over album effect so that the information appears <3
-
-        yoyo()
-        function yoyo() {
-        const albumNamesInCart = shoppingCart.map(save => save.name);
-        
-        if (albumNamesInCart.includes(album.name)) {
-            info.style.visibility = 'visible';
-            listenLi.style.backgroundColor = "rgb(231, 58, 58, 0.5)";
-        } else {
-            card.addEventListener("mouseover", (e) => {
-                info.style.visibility = "visible";
-            });
-            if (!albumNamesInCart.includes(album.name)) {
-                card.addEventListener("mouseout", (e) => {
-                info.style.visibility = "hidden";
-                })
-            }
-
-        }
-        }
 
 
-        card.addEventListener("click", (e) => {
-            if (shoppingCart.includes(album)){
-                for (i=0; i < shoppingCart.length; i++) {
-                    if (shoppingCart[i] === album) {
-                        shoppingCart.splice(i, 1)
-                        info.style.visibility = "hidden";
-                    }
-                };
-            } else {
-            shoppingCart.push(album);
-            listenLi.style.backgroundColor = "rgb(231, 58, 58, 0.5)"; 
-            info.style.visibility = "visible";
-
-            }
-            updateSavedAlbums()
-            renderAlbums()
-        });
 
     });
 }
+
+
+const albumNamesInCart = shoppingCart.map(save => save.name);
+let cards = document.querySelectorAll('.card');
+
+for (let i = 0; i < cards.length; i++) {
+    const card = cards[i];
+    let album = top50albums[i];
+    let listenLi = card.querySelector(".to-listen");
+    let info = card.querySelector(".info")
+    
+
+
+    card.addEventListener("click", (e) => {
+        if (shoppingCart.includes(album)){
+            for (j=0; j < shoppingCart.length; j++) {
+                if (shoppingCart[j] === album) {
+                    shoppingCart.splice(j, 1)
+                    info.style.visibility = "hidden";
+                    listenLi.style.backgroundColor = "transparent"; 
+                }
+            };
+        } else {
+        shoppingCart.push(album);
+        
+        listenLi.style.backgroundColor = "rgb(231, 58, 58, 1)"; 
+        info.style.visibility = "visible";
+        }
+        updateSavedAlbums()
+    });
+
+    card.addEventListener("mouseover", (e) => {
+        info.style.visibility = "visible";
+        console.log('yo')
+    });
+    if (!albumNamesInCart.includes(album.name)) {
+        card.addEventListener("mouseout", (e) => {
+            if (shoppingCart.includes(album)){
+                for (j=0; j < shoppingCart.length; j++) {
+                    if (shoppingCart[j] === album) {
+                        listenLi.style.backgroundColor = "rgb(231, 58, 58, 1)"; 
+                        info.style.visibility = "visible";
+                    }
+                };
+            } else {       
+                info.style.visibility = "hidden";
+                listenLi.style.backgroundColor = "transparent"; 
+            }
+        })
+    }
+
+}
+
+
 
         
 
