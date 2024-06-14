@@ -6,7 +6,6 @@ let tabs = document.querySelectorAll('#diensten .tab')
 fetch('webdev/tekst.json')
     .then(response => response.json())
     .then(tekst => {
-        console.log(tekst.diensten)
         titel.innerHTML = tekst.diensten[0].titel
         lijst.innerHTML = tekst.diensten[0].beschrijving
 
@@ -18,12 +17,7 @@ fetch('webdev/tekst.json')
                 tabs[i].classList.add('huidig')
                 titel.innerHTML = tekst.diensten[i].titel
                 lijst.innerHTML = tekst.diensten[i].beschrijving
-            })
-            console.log(tekst.diensten[i].titel);
-            console.log(tekst.diensten[i].beschrijving);
-            
-        }
-        
-        
+            })        
+        }           
     })
     .catch(error => console.error('Error loading translations:', error));

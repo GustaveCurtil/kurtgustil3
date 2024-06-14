@@ -6,7 +6,7 @@ let wave = []
 let lang;
 let kort;
 
-let bediening = 40;
+let bediening = 30;
 let slider;
 let parentElement = document.getElementById('sinusanimatie'); // replace with your parent element's ID
 let parentWidth = parentElement.clientWidth;
