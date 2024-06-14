@@ -44,9 +44,8 @@
     /* pagina 2*/
     .portfoliopagina {
         grid-template-columns: 1fr;
-        grid-template-rows: 12vw 60vw 1fr 4fr 12vw;
+        grid-template-rows: 60vw 1fr 4fr 12vw;
         grid-template-areas: 
-        "titel"
         "websites"
         "werkwijze"
         "portfolio"

@@ -2,10 +2,10 @@
 /*/ / PROFIELFOTO / /*/
 #profielfoto {
     background-image: url(/media/gust.png);
-    background-size: 45%;
-    background-position: 50%;
+    background-size: 100%;
+    /* background-position: 50%; */
     background-blend-mode:luminosity;
-    background-color: rgb(6, 57, 30);
+    background-color: rgb(56, 88, 124);
     position: relative;
 }
 
@@ -22,6 +22,8 @@
     flex-direction: column;
     flex-wrap: wrap;
     border-top: 1px solid rgb(255, 100, 100);
+    border-right: 1px solid rgb(255, 100, 100);
+    border-left: 1px solid rgb(255, 100, 100);
 }
 
 .tab {
