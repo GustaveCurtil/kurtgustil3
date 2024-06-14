@@ -15,6 +15,10 @@
     border-bottom: 0;
 }
 
+#portfolio div:hover {
+    font-weight: 600;
+}
+
 @media screen and (max-width: 400px) {
     #portfolio div p {
         display: inline-block;

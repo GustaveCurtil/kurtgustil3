@@ -9,11 +9,6 @@
     position: relative;
 }
 
-#profielfoto img {
-    width: 69%;
-    position: absolute;
-    bottom: 0%;
-}
 
 
 /*/ / DIENSTEN / /*/
@@ -22,8 +17,15 @@
     flex-direction: column;
     flex-wrap: wrap;
     border-top: 1px solid rgb(255, 100, 100);
-
+    position: relative;
     background-color: rgb(255, 234, 117);
+}
+
+
+#diensten img {
+    width: 10%;
+    position: absolute;
+    bottom: 0%;
 }
 
 .tab {
@@ -41,7 +43,7 @@
     font-weight: 500;
 }
 
-.tab:nth-child(4) {
+.tab:nth-child(5) {
     border-bottom: 0;
 }
 
