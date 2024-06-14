@@ -1,7 +1,7 @@
 
 /*/ / PROFIELFOTO / /*/
 #profielfoto {
-    background-image: url(/media/gust.png);
+    background-image: url(../media/gust.png);
     background-size: 100%;
     /* background-position: 50%; */
     background-blend-mode:luminosity;
@@ -22,8 +22,6 @@
     flex-direction: column;
     flex-wrap: wrap;
     border-top: 1px solid rgb(255, 100, 100);
-    border-right: 1px solid rgb(255, 100, 100);
-    border-left: 1px solid rgb(255, 100, 100);
 }
 
 .tab {
@@ -35,17 +33,17 @@
     align-items: center;
 
     border-bottom: 1px solid rgb(255, 100, 100);
-    border-right: 1px solid rgb(255, 100, 100); ;
+    border-left: 1px solid rgb(255, 100, 100); ;
     background-color: rgb(255, 180, 180);
 }
 
-.tab:nth-child(3) {
+.tab:nth-child(4) {
     border-bottom: 0;
 }
 
 
 #diensten .huidig {
-    border-right: none;
+    border-left: none;
     background-color:transparent;
 }
 
@@ -83,6 +81,9 @@ ul {
 
     font-size: 0.7vw;
     font-size: 14px;
+
+    background-image: url(../media/paper.jpg);
+    background-size: cover;
 
 }
 

@@ -88,11 +88,11 @@
         grid-template-columns: calc(4 * var(--hoogte-header)) calc(7 * var(--hoogte-header)) 18fr 38fr;
         grid-template-rows: var(--hoogte-header) 20fr 25fr 18fr calc(4 * var(--hoogte-header));
         grid-template-areas: 
-        "themas titel titel titel"
-        "profielfoto diensten contactgegevens memorygame"
-        "profielfoto palestina voorstelling memorygame"
-        "sinusanimatie sinusanimatie voorstelling memorygame"
-        "portfolio websites werkwijze werkwijze";
+        "themas werkwijze voorstelling memorygame"
+        "profielfoto contactgegevens voorstelling memorygame"
+        "profielfoto titel voorstelling memorygame"
+        "palestina sinusanimatie sinusanimatie memorygame"
+        "portfolio websites diensten diensten";
     }
 
     #themas {display: flex;}

@@ -16,6 +16,11 @@ body {
 
 }
 
+h1 {
+    font-size: xx-large;
+    font-weight: 900;
+}
+
 /* section, body>div, header {
     border: 1px solid black;
 } */
@@ -44,13 +49,14 @@ body {
 }
 
 #palestina h2 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: max-content;
     position: absolute;
-    color: rgb(255, 0, 0);
+    color: rgb(148, 46, 46);
+    font-size: 13px;
     top: 50%;
     left: 50%;
-    transform: translate(-25%, -50%);
+    transform: translate(-25%, -100%);
     line-height: normal;
     
 }

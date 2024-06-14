@@ -137,3 +137,12 @@ img {
         font-size: xx-large;
     }
 }
+
+#werkwijze, #voorstelling {
+    border: 2px solid black;
+    border-top: 0;
+}
+
+#voorstelling {
+    border-bottom: 0;
+}
