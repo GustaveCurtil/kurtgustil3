@@ -45,7 +45,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: hsl(var(--browser-h), var(--browser-s), var(--browser-l), 40%);
+    background-color: hsl(var(--browser-h), var(--browser-s), var(--browser-l), 30%);
     border-top: 0.1px solid hsl(var(--browser-h), var(--browser-s), var(--browser-l));;
     border-bottom: 0.1px solid hsl(var(--browser-h), var(--browser-s), var(--browser-l));;
 

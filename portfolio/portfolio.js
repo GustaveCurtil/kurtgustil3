@@ -22,6 +22,11 @@ fetch('portfolio/websites.json')
 
             tab.style.backgroundColor = "hsla(" + website.h + ", 42%, 70%, 0.5)";
 
+            if (i === 0) {
+                tab.style.backgroundColor = "hsla(" + websites[0].h + ", 42%, 70%, 1)";
+            }
+
+
             tab.appendChild(title);
             portfolio.appendChild(tab);
             /* WEBBROWSER */

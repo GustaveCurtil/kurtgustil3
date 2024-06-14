@@ -34,5 +34,12 @@
         "beschrijving": "louisarne", 
         "scrolbaar": false, 
     "h": "20"  
+    }, 
+    {
+        "url": "www.Feliio.be",
+        "foto": "portfolio/fotos/codequest.webp",
+        "beschrijving": "louisarne", 
+        "scrolbaar": false, 
+    "h": "60"  
     }
 ]
