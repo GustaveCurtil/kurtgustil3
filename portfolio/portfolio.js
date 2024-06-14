@@ -3,7 +3,7 @@ let browserWindow = document.querySelector('.window');
 let image = document.querySelector('.window img');
 let uitleg = document.querySelector('#werkwijze')
 
-fetch('websites/websites.json')
+fetch('portfolio/websites.json')
     .then(response => response.json())
     .then(websites => {
         for (let i = 0; i < websites.length; i++) {
@@ -20,11 +20,14 @@ fetch('websites/websites.json')
             tab.style.height = "calc( 100% / " + websites.length + ")"
             }
 
+            tab.style.backgroundColor = "hsla(" + website.h + ", 42%, 70%, 0.5)";
+
             tab.appendChild(title);
             portfolio.appendChild(tab);
             /* WEBBROWSER */
             tab.addEventListener('click', (e)=> {
-                tab.style.backgroundColor = 'white';
+                tab.style.backgroundColor = "hsla(" + website.h + ", 42%, 70%, 1)";
+                
                 if (!website.scrolbaar) {
                     browserWindow.style.overflowY = 'hidden';
                     image.src = website.foto;

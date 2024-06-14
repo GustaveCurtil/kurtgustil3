@@ -3,7 +3,7 @@ let lijst = document.querySelector("#dienst ul");
 
 let tabs = document.querySelectorAll('#diensten .tab')
 
-fetch('tekst.json')
+fetch('webdev/tekst.json')
     .then(response => response.json())
     .then(tekst => {
         console.log(tekst.diensten)

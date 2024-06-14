@@ -1,4 +1,6 @@
 :root{
     --hoogte-header: 4vw;
-    --browser-donker: 0, 0%, 0%;
+    --browser-r: 10;
+    --browser-g: 100%;
+    --browser-b: 40%;
 }

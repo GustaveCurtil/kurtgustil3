@@ -1,0 +1,107 @@
+#sinusanimatie {
+    line-height: 0;
+    height: 100%;
+    max-height: 100%;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+    /* Remove any default inline-block spacing */
+    width: 100%;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 15px;
+    cursor: pointer;
+    background: rgb(6, 6, 6);
+    border-bottom: 0.1px solid white;
+    border-top: 0.1px solid white;
+    border-radius: 0px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    height: 14px;
+    width: 14px;
+    border-radius: 32px;
+    background: white;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: black;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 15px;
+    cursor: pointer;
+    background: black;
+    border: 0.1px solid white;
+    border-radius: 0px;
+}
+
+input[type=range]::-moz-range-thumb {
+    height: 14px;
+    width: 14px;
+    border-radius: 32px;
+    background: #198CFF;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 15px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: black;
+    border-radius: 0px;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: black;
+    border-radius: 0px;
+}
+
+input[type=range]::-ms-thumb {
+    height: 14px;
+    width: 14px;
+    border-radius: 32px;
+    background: #198CFF;
+    cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: black;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: black;
+}
