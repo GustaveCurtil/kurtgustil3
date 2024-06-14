@@ -365,7 +365,7 @@ albumWrapper.classList.add('favo-albums');
 let memorygame = document.querySelector(".static")
 
 //To Listen lijst
-const shoppingCart = [];
+let shoppingCart = new Set();
 
 //bij laden document
 sortBy("artist")
@@ -531,17 +531,16 @@ for (let i = 0; i < cards.length; i++) {
 
 
     card.addEventListener("click", (e) => {
-        if (shoppingCart.includes(album)){
+        if (shoppingCart.has(album)){
             for (j=0; j < shoppingCart.length; j++) {
                 if (shoppingCart[j] === album) {
-                    shoppingCart.splice(j, 1)
+                    shoppingCart.delete(album)
                     info.style.visibility = "hidden";
                     listenLi.style.backgroundColor = "transparent"; 
                 }
             };
         } else {
-        shoppingCart.push(album);
-        
+        shoppingCart.add(album);
         listenLi.style.backgroundColor = "rgb(231, 58, 58, 1)"; 
         info.style.visibility = "visible";
         }
@@ -553,13 +552,9 @@ for (let i = 0; i < cards.length; i++) {
     });
 
     card.addEventListener("mouseout", (e) => {
-        if (shoppingCart.includes(album)){
-            for (j=0; j < shoppingCart.length; j++) {
-                if (shoppingCart[j] === album) {
-                    listenLi.style.backgroundColor = "rgb(231, 58, 58, 1)"; 
-                    info.style.visibility = "visible";
-                }
-            };
+        if (shoppingCart.has(album)){
+            listenLi.style.backgroundColor = "rgb(231, 58, 58, 1)"; 
+            info.style.visibility = "visible";
         } else {       
             info.style.visibility = "hidden";
             listenLi.style.backgroundColor = "transparent"; 
@@ -573,7 +568,7 @@ for (let i = 0; i < cards.length; i++) {
 //Nummer voor aantal saved albums
 function updateSavedAlbums() {
 const savedAlbums = document.querySelector(".displayFavos").firstChild
-savedAlbums.textContent = "♫ : " + shoppingCart.length 
+savedAlbums.textContent = "♫ : " + shoppingCart.size
 }
 
 
@@ -583,7 +578,7 @@ function lengtePagina() {
     let lengtePagina = 200
 
     if (shoppingCart.length > 8) {
-        lengtePagina = 40 + 20*shoppingCart.length 
+        lengtePagina = 40 + 20*shoppingCart.size 
     }
 
     return lengtePagina
@@ -631,16 +626,19 @@ function generatePDF() {
 
     let y = 20;
 
-    pdf.text("ALBUMS TO LISTEN TO -- enjoy! :)", 50, 20);
+    pdf.text("ALBUMS TO LISTEN TO -- enjoy! :) www.kurtgustil.be", 50, 20);
 
     // Create an array of promises for loading and converting images
-    let promises = shoppingCart.map(item => convertImageToBase64(item.cover));
+    let shoppingCartArray = Array.from(shoppingCart);
+
+    // Create an array of promises for loading and converting images
+    let promises = shoppingCartArray.map(item => convertImageToBase64(item.cover));
 
     Promise.all(promises)
         .then(images => {
             images.forEach((base64, index) => {
                 y += 20;
-                let item = shoppingCart[index];
+                let item = shoppingCartArray[index];
                 let content = `${item.name} (${item.year})\n${item.artist}\n`;
                 pdf.addImage(base64, 'PNG', 20, y - 10, 20, 20); // Use 'PNG' for PNG images
                 pdf.text(content, 50, y);
