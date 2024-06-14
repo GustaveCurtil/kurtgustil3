@@ -10,6 +10,7 @@ body {
     font-family: "Chivo Mono", monospace;
     width: 100vw;
     height: 100svh;
+    overflow: hidden;
     background-color: rgb(255, 255, 255);
     color: rgb(180, 84, 84);
 
