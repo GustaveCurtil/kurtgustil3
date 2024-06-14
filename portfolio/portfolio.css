@@ -3,7 +3,7 @@
     width: 100%;
     height: 100%;
     
-    border-bottom: 0.1px solid hsl(var(--browser-r), var(--browser-g), var(--browser-b));;
+    border-bottom: 0.1px solid hsl(var(--browser-h), var(--browser-s), var(--browser-l));;
 
     display: flex;
     align-items: center;
@@ -34,8 +34,8 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    border-left: 0.1px solid hsl(var(--browser-r), var(--browser-g), var(--browser-b));;
-    border-right: 0.1px solid hsl(var(--browser-r), var(--browser-g), var(--browser-b));;
+    border-left: 0.1px solid hsl(var(--browser-h), var(--browser-s), var(--browser-l));;
+    border-right: 0.1px solid hsl(var(--browser-h), var(--browser-s), var(--browser-l));;
 }
 
 .bar {
@@ -45,9 +45,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: hsl(var(--browser-r), var(--browser-g), var(--browser-b), 40%);
-    border-top: 0.1px solid hsl(var(--browser-r), var(--browser-g), var(--browser-b));;
-    border-bottom: 0.1px solid hsl(var(--browser-r), var(--browser-g), var(--browser-b));;
+    background-color: hsl(var(--browser-h), var(--browser-s), var(--browser-l), 40%);
+    border-top: 0.1px solid hsl(var(--browser-h), var(--browser-s), var(--browser-l));;
+    border-bottom: 0.1px solid hsl(var(--browser-h), var(--browser-s), var(--browser-l));;
 
 }
 
@@ -103,7 +103,7 @@ img {
     width: 75%;
 
     background-color: rgba(255, 255, 255, 0.669);
-    border: 0.5px solid hsl(var(--browser-r), var(--browser-g), var(--browser-b));
+    border: 0.5px solid hsl(var(--browser-h), var(--browser-s), var(--browser-l));
 
     vertical-align: middle;
 
@@ -118,7 +118,7 @@ img {
 }
 
 .window::-webkit-scrollbar-track{
-	background-color: hsl(var(--browser-r), var(--browser-g), var(--browser-b), 20%);
+	background-color: hsl(var(--browser-h), var(--browser-s), var(--browser-l), 20%);
 }
 
 .window::-webkit-scrollbar{
@@ -126,7 +126,7 @@ img {
 }
 
 .window::-webkit-scrollbar-thumb{
-	background-color: hsl(var(--browser-r), var(--browser-g), var(--browser-b), 80%);
+	background-color: hsl(var(--browser-h), var(--browser-s), var(--browser-l), 80%);
 }
 
 /* BESCHRIJVING */

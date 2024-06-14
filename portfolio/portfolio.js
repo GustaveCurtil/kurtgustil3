@@ -1,7 +1,7 @@
 let portfolio = document.getElementById('portfolio');
 let browserWindow = document.querySelector('.window');
 let image = document.querySelector('.window img');
-let uitleg = document.querySelector('#werkwijze')
+let uitleg = document.querySelector('#werkwijze');
 
 fetch('portfolio/websites.json')
     .then(response => response.json())
@@ -26,6 +26,17 @@ fetch('portfolio/websites.json')
             portfolio.appendChild(tab);
             /* WEBBROWSER */
             tab.addEventListener('click', (e)=> {
+                for (let i = 0; i < websites.length; i++) {
+                let tabs = document.querySelectorAll("#portfolio div");
+                tabs[i].style.backgroundColor = "hsla(" + websites[i].h + ", 42%, 70%, 0.5)";
+                }
+
+                let root = document.documentElement;
+                root.style.setProperty('--browser-h', website.h);
+
+
+
+
                 tab.style.backgroundColor = "hsla(" + website.h + ", 42%, 70%, 1)";
                 
                 if (!website.scrolbaar) {
