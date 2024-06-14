@@ -10,7 +10,7 @@
 #sinusanimatie {grid-area: sinusanimatie; overflow-y: auto;}
 #portfolio {grid-area: portfolio; overflow-y: auto;}
 #websites {grid-area: websites; overflow-y: auto;}
-#werkwijze {grid-area: werkwijze; overflow-y: auto;}
+#statistieken {grid-area: statistieken; overflow-y: auto;}
 
 /*/ / MOBILE / /*/
 @media screen and (max-width: 400px) {
@@ -39,7 +39,7 @@
     #sinusanimatie {display: none;}
     #portfolio {display: none;}
     #websites {display: none;}
-    #werkwijze {display: none;}
+    #statistieken {display: none;}
 
     /* pagina 2*/
     .portfoliopagina {
@@ -47,7 +47,7 @@
         grid-template-rows: 60vw 1fr 4fr 12vw;
         grid-template-areas: 
         "websites"
-        "werkwijze"
+        "statistieken"
         "portfolio"
         "pagina2";
     }
@@ -59,7 +59,7 @@
     .portfoliopagina #diensten {display: none;}
     .portfoliopagina #portfolio {display: flex;}
     .portfoliopagina #websites {display: flex;}
-    .portfoliopagina #werkwijze {display: flex;}
+    .portfoliopagina #statistieken {display: flex;}
 
     /* pagina 3*/
     .memorypagina {
@@ -77,7 +77,7 @@
     .memorypagina #diensten {display: none;}
     .memorypagina #portfolio {display: none;}
     .memorypagina #websites {display: none;}
-    .memorypagina #werkwijze {display: none;}
+    .memorypagina #statistieken {display: none;}
     .memorypagina #memorygame {display: flex;}
 }
 
@@ -88,9 +88,9 @@
         grid-template-columns: calc(4 * var(--hoogte-header)) calc(7 * var(--hoogte-header)) 18fr 38fr;
         grid-template-rows: var(--hoogte-header) 20fr 25fr 18fr calc(4 * var(--hoogte-header));
         grid-template-areas: 
-        "themas werkwijze voorstelling memorygame"
-        "profielfoto contactgegevens voorstelling memorygame"
+        "themas titel voorstelling memorygame"
         "profielfoto titel voorstelling memorygame"
+        "profielfoto contactgegevens voorstelling memorygame"
         "palestina sinusanimatie sinusanimatie memorygame"
         "portfolio websites diensten diensten";
     }

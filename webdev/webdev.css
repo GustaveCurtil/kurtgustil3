@@ -90,5 +90,9 @@ ul {
 
 /*/ / VOORSTELLING / /*/
 #voorstelling {
+    border: 2px solid black;
+    border-top: 0;
+    border-bottom: 0;
+    
     padding: 10px;
 }

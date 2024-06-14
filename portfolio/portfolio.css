@@ -130,19 +130,4 @@ img {
 }
 
 /* BESCHRIJVING */
-@media screen and (max-width: 400px) {
-    #werkwijze {
-        justify-content: center;
-        align-items: center;
-        font-size: xx-large;
-    }
-}
 
-#werkwijze, #voorstelling {
-    border: 2px solid black;
-    border-top: 0;
-}
-
-#voorstelling {
-    border-bottom: 0;
-}
