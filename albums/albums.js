@@ -519,7 +519,7 @@ function renderAlbums() {
 }
 
 
-const albumNamesInCart = shoppingCart.map(save => save.name);
+// const albumNamesInCart = shoppingCart.map(save => save.name);
 let cards = document.querySelectorAll('.card');
 
 for (let i = 0; i < cards.length; i++) {
@@ -550,29 +550,25 @@ for (let i = 0; i < cards.length; i++) {
 
     card.addEventListener("mouseover", (e) => {
         info.style.visibility = "visible";
-        console.log('yo')
     });
-    if (!albumNamesInCart.includes(album.name)) {
-        card.addEventListener("mouseout", (e) => {
-            if (shoppingCart.includes(album)){
-                for (j=0; j < shoppingCart.length; j++) {
-                    if (shoppingCart[j] === album) {
-                        listenLi.style.backgroundColor = "rgb(231, 58, 58, 1)"; 
-                        info.style.visibility = "visible";
-                    }
-                };
-            } else {       
-                info.style.visibility = "hidden";
-                listenLi.style.backgroundColor = "transparent"; 
-            }
-        })
-    }
+
+    card.addEventListener("mouseout", (e) => {
+        if (shoppingCart.includes(album)){
+            for (j=0; j < shoppingCart.length; j++) {
+                if (shoppingCart[j] === album) {
+                    listenLi.style.backgroundColor = "rgb(231, 58, 58, 1)"; 
+                    info.style.visibility = "visible";
+                }
+            };
+        } else {       
+            info.style.visibility = "hidden";
+            listenLi.style.backgroundColor = "transparent"; 
+        }
+    })
+ 
 
 }
-
-
-
-        
+     
 
 //Nummer voor aantal saved albums
 function updateSavedAlbums() {
@@ -601,24 +597,25 @@ function generatePDF() {
         unit: 'mm',
         format: [200, lengtePagina()],
         putOnlyUsedFonts:true
-        });
+    });
 
-        let content = '';
-        let y = 20
-        let image = new Image();
 
-        pdf.text("ALBUMS TO LISTEN TO -- enjoy! :)", 50, 20)
+    let content = '';
+    let y = 20
+    let beeld = new Image();
 
-        shoppingCart.forEach(element => {
-            // content.addImage(element.cover, 'PNG', 0, 0, 210, 297)
-            image.src= element.cover
-            y = y + 20
-            content = element.name + " (" + element.year + ")" + '\r\n' + element.artist +'\r\n';
-            pdf.addImage(image, 'jpg', 20, y-10, 20, 20)
-            pdf.text(content, 50, y);
-            pdf.text('\n')
-        });
+    pdf.text("ALBUMS TO LISTEN TO -- enjoy! :)", 50, 20)
 
+    shoppingCart.forEach(element => {
+        // content.addImage(element.cover, 'PNG', 0, 0, 210, 297)
+        beeld.src= element.cover
+        console.log(element);
+        y = y + 20
+        content = element.name + " (" + element.year + ")" + '\r\n' + element.artist +'\r\n';
+        pdf.addImage(beeld, 'jpg', 20, y-10, 20, 20)
+        pdf.text(content, 50, y);
+        pdf.text('\n')
+    });
 
     pdf.save('AlbumsToListen.pdf')
 }
