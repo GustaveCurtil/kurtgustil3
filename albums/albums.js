@@ -394,7 +394,7 @@ function sortBy(x) {
 }
 
 //Knop
-let buttons = document.getElementsByTagName('button');
+// let buttons = document.getElementsByTagName('button');
 
 function resetStyle() {
     for (let i = 0; i < buttons.length; i++) {
@@ -403,57 +403,57 @@ function resetStyle() {
 }
 
 //HAZARD KNOP
-let sortHazard = document.querySelector(".sort-hazard")
-sortHazard.addEventListener("click", (e) => {
-    shuffleArray(top50albums);
-    resetStyle()
-    sortHazard.style.backgroundColor = 'rgb(231, 58, 58)';
+// let sortHazard = document.querySelector(".sort-hazard")
+// sortHazard.addEventListener("click", (e) => {
+//     shuffleArray(top50albums);
+//     resetStyle()
+//     sortHazard.style.backgroundColor = 'rgb(231, 58, 58)';
    
-});
+// });
 
-//ALBUM KNOP
-let sortName = document.querySelector(".sort-name")
-sortName.addEventListener("click", (e) => {
-    sortBy("name");
-    resetStyle()
-    sortName.style.backgroundColor = 'rgb(231, 58, 58)';
-});
+// //ALBUM KNOP
+// let sortName = document.querySelector(".sort-name")
+// sortName.addEventListener("click", (e) => {
+//     sortBy("name");
+//     resetStyle()
+//     sortName.style.backgroundColor = 'rgb(231, 58, 58)';
+// });
 
-//ARTIST KNOP
-let sortArtist = document.querySelector(".sort-artist")
-sortArtist.addEventListener("click", (e) => {
-    sortBy("artist");
-    resetStyle()
-    sortArtist.style.backgroundColor = 'rgb(231, 58, 58)';
-});
+// //ARTIST KNOP
+// let sortArtist = document.querySelector(".sort-artist")
+// sortArtist.addEventListener("click", (e) => {
+//     sortBy("artist");
+//     resetStyle()
+//     sortArtist.style.backgroundColor = 'rgb(231, 58, 58)';
+// });
 
-//YEAR KNOP
-let sortYear = document.querySelector(".sort-year")
-sortYear.addEventListener("click", (e) => {
-    sortBy("year");
-    resetStyle()
-    sortYear.style.backgroundColor = 'rgb(231, 58, 58)';
-});
+// //YEAR KNOP
+// let sortYear = document.querySelector(".sort-year")
+// sortYear.addEventListener("click", (e) => {
+//     sortBy("year");
+//     resetStyle()
+//     sortYear.style.backgroundColor = 'rgb(231, 58, 58)';
+// });
 
 
 //genres
-let allGenres = top50albums.map(a => a.genre);
-let combinedGenres = [].concat(...allGenres)
+// let allGenres = top50albums.map(a => a.genre);
+// let combinedGenres = [].concat(...allGenres)
 
-let singleGenres = combinedGenres.filter(item => {
-    var count = this[item] ? this[item] : 0;
-    this[item] = ++count;
-    return count === 3;
-   })
+// let singleGenres = combinedGenres.filter(item => {
+//     var count = this[item] ? this[item] : 0;
+//     this[item] = ++count;
+//     return count === 3;
+//    })
    
-singleGenres.sort()
+// singleGenres.sort()
 
-singleGenres.forEach(genre => {
-    let buttonGenre = document.createElement("button");
-    let genreParagraph = document.querySelector(".filter");
-    buttonGenre.innerHTML = genre;
-    // genreParagraph.appendChild(buttonGenre);
-});
+// singleGenres.forEach(genre => {
+//     let buttonGenre = document.createElement("button");
+//     let genreParagraph = document.querySelector(".filter");
+//     buttonGenre.innerHTML = genre;
+//     // genreParagraph.appendChild(buttonGenre);
+// });
 
 
 //Maak albumkaarten aan
