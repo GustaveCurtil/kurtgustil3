@@ -52,6 +52,7 @@
         "pagina2";
     }
 
+    .portfoliopagina #titel {display: none;} 
     .portfoliopagina #voorstelling {display: none;}
     .portfoliopagina #profielfoto {display: none;}
     .portfoliopagina #contactgegevens {display: none;}
