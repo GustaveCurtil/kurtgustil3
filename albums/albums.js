@@ -590,33 +590,84 @@ function lengtePagina() {
 }
 
 
-//pdf functie
+// //pdf functie
+// function generatePDF() {
+
+//     let pdf = new jsPDF({
+//         orientation: 'p',
+//         unit: 'mm',
+//         format: [200, lengtePagina()],
+//         putOnlyUsedFonts:true
+//     });
+
+
+//     let content = '';
+//     let y = 20
+//     let beeld = new Image();
+
+//     pdf.text("ALBUMS TO LISTEN TO -- enjoy! :)", 50, 20)
+
+//     shoppingCart.forEach(element => {
+//         // content.addImage(element.cover, 'PNG', 0, 0, 210, 297)
+//         beeld.src= element.cover
+//         console.log(element);
+//         y = y + 20
+//         content = element.name + " (" + element.year + ")" + '\r\n' + element.artist +'\r\n';
+//         pdf.addImage(beeld, 'jpeg', 20, y-10, 20, 20)
+//         pdf.text(content, 50, y);
+//         pdf.text('\n')
+//     });
+
+//     pdf.save('AlbumsToListen.pdf')
+// }
+
 function generatePDF() {
     let pdf = new jsPDF({
         orientation: 'p',
         unit: 'mm',
         format: [200, lengtePagina()],
-        putOnlyUsedFonts:true
+        putOnlyUsedFonts: true
     });
 
+    let y = 20;
 
-    let content = '';
-    let y = 20
-    let beeld = new Image();
+    pdf.text("ALBUMS TO LISTEN TO -- enjoy! :)", 50, 20);
 
-    pdf.text("ALBUMS TO LISTEN TO -- enjoy! :)", 50, 20)
+    // Create an array of promises for loading and converting images
+    let promises = shoppingCart.map(item => convertImageToBase64(item.cover));
 
-    shoppingCart.forEach(element => {
-        // content.addImage(element.cover, 'PNG', 0, 0, 210, 297)
-        beeld.src= element.cover
-        console.log(element);
-        y = y + 20
-        content = element.name + " (" + element.year + ")" + '\r\n' + element.artist +'\r\n';
-        pdf.addImage(beeld, 'jpg', 20, y-10, 20, 20)
-        pdf.text(content, 50, y);
-        pdf.text('\n')
-    });
+    Promise.all(promises)
+        .then(images => {
+            images.forEach((base64, index) => {
+                y += 20;
+                let item = shoppingCart[index];
+                let content = `${item.name} (${item.year})\n${item.artist}\n`;
+                pdf.addImage(base64, 'PNG', 20, y - 10, 20, 20); // Use 'PNG' for PNG images
+                pdf.text(content, 50, y);
+            });
 
-    pdf.save('AlbumsToListen.pdf')
+            pdf.save('AlbumsToListen.pdf');
+        })
+        .catch(error => {
+            console.error('Error loading images:', error);
+        });
 }
 
+// Function to convert an image path to base64
+function convertImageToBase64(imagePath) {
+    return new Promise((resolve, reject) => {
+        let img = new Image();
+        img.crossOrigin = 'Anonymous';
+        img.onload = () => {
+            const canvas = document.createElement('canvas');
+            canvas.width = img.width;
+            canvas.height = img.height;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0);
+            const base64 = canvas.toDataURL('image/png');
+            resolve(base64);
+        };
+        img.onerror = reject;
+        img.src = imagePath;
+    });
+}
