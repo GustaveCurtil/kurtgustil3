@@ -1,6 +1,5 @@
 
 #themas > div {
-    border: 1px solid blue;
     height: 100%;
     width: 25%;
 
@@ -37,8 +36,8 @@
 } */
 
 
-#titel img {
-    height: 69%;
+#themas img {
+    height: 100%;
     width: auto;
 }
 
