@@ -578,7 +578,7 @@ function lengtePagina() {
     let lengtePagina = 200
 
     if (shoppingCart.length > 8) {
-        lengtePagina = 40 + 20*shoppingCart.size 
+        lengtePagina = 40 + 20 * shoppingCart.size 
     }
 
     return lengtePagina
