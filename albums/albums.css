@@ -57,8 +57,8 @@ button {
     height: 100%;
     position: relative;
     color: rgb(207, 42, 42);
-    border-left: rgb(207, 42, 42) solid 4px;
-    border-bottom: rgb(207, 42, 42) solid 4px;
+    /* border-left: rgb(207, 42, 42) solid 4px;
+    border-bottom: rgb(207, 42, 42) solid 4px; */
 }
 
 .static {
